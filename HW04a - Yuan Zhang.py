@@ -29,25 +29,29 @@ def GitHubRetriver(user_id):
             return repo_pair
             
 
-def run_GitHubRetriver(user_id):
+def run_GitHubRetriver(user_id):    
+    print("---Below shows the user's repositories and their number of commits---")
     dic = GitHubRetriver(user_id)
     for key in dic:
         print('[Repo] {} [Number of commits] {}'.format(key, dic[key]))
     
+    
 
 class testGitHubRetriver(unittest.TestCase):
+    
     def testKybeth(self):
-        self.assertEqual(len(GitHubRetriver('Kybeth')), 9)
-        self.assertEqual(sorted(GitHubRetriver('Kybeth').keys())[0], 'auto-sms-by-twilio')
+        self.assertEqual(len(GitHubRetriver('Kybeth')), 9) # test if the number of repositories are right
+        self.assertEqual(sorted(GitHubRetriver('Kybeth'))[0], 'Courses-Related')
         self.assertEqual(GitHubRetriver('Kybeth')['auto-sms-by-twilio'], 3)
-        
+  
     def testrichkempinski(self):
-        self.assertDictEqual(GitHubRetriver('richkempinski'), {})##
+        self.assertDictEqual(GitHubRetriver('richkempinski'), {'hellogitworld': 30, 'helloworld': 6, 'Mocks': 9, 'Project1': 2, 'threads-of-life': 1})
+    
 
 
 if __name__ == '__main__':
     # examples of running the code
-    run_GitHubRetriver("richkempinski")
+    run_GitHubRetriver('richkempinski')
     
     #unittest.main(exit=False) # this runs all of the tests - use this line if running from Spyder
     unittest.main(exit=True) # this runs all of the tests - use this line if running from the command line
