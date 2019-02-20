@@ -30,13 +30,12 @@ def GitHubRetriver(user_id):
             
 
 def run_GitHubRetriver(user_id):    
-    print("---Below shows the user's repositories and their number of commits---")
+    print("---Below shows the repositories and the number of commits of {}---".format(user_id))
     dic = GitHubRetriver(user_id)
     for key in dic:
-        print('[Repo] {} [Number of commits] {}'.format(key, dic[key]))
+        print('{}: {}'.format(key, dic[key]))
     
     
-
 class testGitHubRetriver(unittest.TestCase):
     
     def testKybeth(self):
