@@ -1,6 +1,6 @@
 # Stevens-SSW567-HW04a-GitHubApi
 
-[![build status of HW05_Mocking](https://travis-ci.org/Kybeth/Stevens-SSW567-HW04a-GitHubApi.svg?branch=HW05_Mocking)](https://travis-ci.org/Kybeth/Stevens-SSW567-HW04a-GitHubApi)
+[![build status of HW05_Mocking](https://travis-ci.org/Kybeth/Stevens-SSW567-HW04a-GitHubApi.svg?branch=HW05a_Mocking)](https://travis-ci.org/Kybeth/Stevens-SSW567-HW04a-GitHubApi)
 
 [The GitHub URL to the repository containing my code for HW4a](https://github.com/Kybeth/Stevens-SSW567-HW04a-GitHubApi)
 
