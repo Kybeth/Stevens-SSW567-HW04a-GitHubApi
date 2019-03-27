@@ -1,11 +1,23 @@
 import unittest
+from unittest import mock
 from HW04a_YuanZhang import GitHubRetriver
 
 
 class testGitHubRetriver(unittest.TestCase):
 
     def testKybeth(self):
-        # test if the number of repositories are right
+        mock_Kybeth = mock.Mock(
+            return_value={'auto-sms-by-twilio': 3, 'Courses-Related': 1,
+                          'Distribution-of-unfair-shuffle': 3,
+                          'hello-world': 3,
+                          'Leetcode-Notebook': 1,
+                          'reveal.js-for-DuckMommy': 8,
+                          'SSW567-HW02a-Triangle567': 12,
+                          'SSW690-project': 5,
+                          'Stevens-SSW567-HW01': 4,
+                          'Stevens-SSW567-HW04a-GitHubApi': 7,
+                          'Stevens-SSW810-Course-Management-Repository': 2})
+        GitHubRetriver = mock_Kybeth
         self.assertEqual(sorted(GitHubRetriver('Kybeth'))
                          [0], 'Courses-Related')
         self.assertEqual(GitHubRetriver('Kybeth')['auto-sms-by-twilio'], 3)
